@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="/styles/style.css" />
     <title>SARAB</title>
   </head>
@@ -10,9 +19,13 @@
     <header>
       <div class="nav-content">
         <div class="user-info">
-          <img src="/images/vigita.ico" alt="pfp" />
+          <a href="/structure/profile.html"
+            ><img src="/images/batman.ico" alt="pfp"
+          /></a>
           <div class="user-text">
-            <p>Nigita <br />user@6969</p>
+            <p class="user-name">batman</p>
+
+            <p class="user-id">user@6969</p>
           </div>
         </div>
         <nav>
@@ -30,5 +43,11 @@
         </div>
       </div>
     </header>
+    <main class="content-wrapper">
+      <form class="search-bar">
+        <input type="text" placeholder="Search for products..." />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </form>
+    </main>
   </body>
 </html>
