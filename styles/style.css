@@ -25,8 +25,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 21px;
-  margin-left: 140px;
+  position: absolute;
+  top: 21px;
+  right: 120px;
+  left: 120px;
+  bottom: 21px;
   gap: 245px;
 }
 
@@ -94,7 +97,11 @@ header {
   align-items: center;
 }
 .search-bar input {
-  margin-left: 155px;
+  position: absolute;
+  top: 114px;
+  right: 120px;
+  left: 120px;
+  bottom: 2126px;
   padding: 0 16px;
   width: 1200px;
   height: 56px;
@@ -120,16 +127,69 @@ header {
 }
 .search-bar i {
   position: absolute;
-  right: 200px;
-  top: 20%;
+  top: 130px;
+  right: 134px;
+  left: 1282px;
+  bottom: 2142px;
   transform: translateY(-50%);
   color: #ffffff;
   cursor: pointer;
 }
 
+.about-us {
+  height: 216px;
+  width: 1200px;
+  top: 200px;
+  right: 120px;
+  left: 120px;
+  bottom: 1312px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  position: absolute;
+  background-color: #ffffff33;
+}
+
+.about-us .header-about-us {
+  position: absolute;
+  width: 1072px;
+  height: 20px;
+  top: 40px;
+  left: 64px;
+  right: 64px;
+  bottom: 156px;
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.about-us .paragraph-about-us {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 1072px;
+  height: 90px;
+  top: 86px;
+  left: 64px;
+  right: 64px;
+  bottom: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  width: 1100px;
+  color: #ffffff;
+}
+
 .collections {
   margin-left: 155px;
   margin-top: 30px;
+  position: absolute;
+  top: 1117px;
   width: 1200px;
   height: 500px;
   display: flex;
@@ -226,11 +286,39 @@ header {
 .collections .big-card:hover {
   cursor: pointer;
   transform: translateY(-10px); /* Moves the card up by 10px */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhances the shadow on hover */
 }
 
 .collections .small-card:hover {
   cursor: pointer;
   transform: translateY(-10px); /* Moves the card up by 10px */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhances the shadow on hover */
+}
+
+footer {
+  height: 334px;
+  width: 100%;
+  position: relative;
+  top: 1962px;
+  bottom: 0;
+  background-color: #121212;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 270px;
+  width: 1200px;
+  top: 24px;
+  right: 120px;
+  left: 120px;
+  bottom: 40px;
+}
+
+footer .footer-container .quick-links p {
+}
+footer .footer-container .quick-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
