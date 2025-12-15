@@ -16,23 +16,20 @@ body {
 header {
   height: 88px;
   width: 100%;
-  padding: 10px 20px;
   background-color: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-content {
+  width: 100%;
   height: 46px;
-  width: 1200px;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 21px;
-  right: 120px;
-  left: 120px;
-  bottom: 21px;
-  gap: 245px;
 }
 
 .user-info img {
@@ -93,27 +90,25 @@ header {
   width: 135px;
 }
 
-.content-wrapper {
+.search-bar {
+  margin: 0 auto;
   margin-top: 30px;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
 }
 .search-bar input {
-  position: absolute;
-  top: 114px;
-  right: 120px;
-  left: 120px;
-  bottom: 2126px;
-  padding: 0 16px;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   height: 56px;
+  padding: 0 48px 0 16px;
   background-color: #ffffff1f;
   border-radius: 12px;
   font-size: 16px;
   color: #ffffff;
   border: none;
-  display: flex;
-  justify-content: space-between;
 }
 
 .search-bar input::placeholder {
@@ -129,10 +124,8 @@ header {
 }
 .search-bar i {
   position: absolute;
-  top: 130px;
-  right: 134px;
-  left: 1282px;
-  bottom: 2142px;
+  right: 20px;
+  top: 50%;
   transform: translateY(-50%);
   color: #ffffff;
   cursor: pointer;
@@ -145,7 +138,6 @@ header {
 .slider-text {
   position: absolute;
   top: 300px;
-  right: 120px;
   left: 120px;
   bottom: 1106px;
   width: 1200px;
@@ -158,9 +150,6 @@ header {
 
 .slider-main-header p {
   font-family: "kavoon", cursive;
-  position: absolute;
-  top: -80px;
-  left: -60px;
   font-size: 40px;
   font-weight: 400;
   line-height: 110%;
@@ -170,9 +159,6 @@ header {
   font-weight: 500;
   line-height: 160%;
   width: 600px;
-  position: absolute;
-  top: -30px;
-  left: -60px;
 }
 .slider-btn {
   display: inline-block;
@@ -189,7 +175,6 @@ header {
   text-decoration: none;
   line-height: 50px;
   text-align: center;
-  margin-left: -60px;
 }
 .slider-btn:hover {
   background-color: #ffffff;
@@ -197,12 +182,10 @@ header {
 }
 
 .slider-container {
-  position: absolute;
   top: 200px;
-  right: 120px;
-  left: 120px;
+  margin: 20px auto;
   bottom: 916px;
-  width: 1200px;
+  max-width: 1200px;
   height: 490px;
 }
 
@@ -253,7 +236,6 @@ header {
   height: 216px;
   width: 1200px;
   top: 740px;
-  right: 120px;
   left: 120px;
   bottom: 1312px;
   display: flex;
@@ -270,7 +252,6 @@ header {
   height: 20px;
   top: 40px;
   left: 64px;
-  right: 64px;
   bottom: 156px;
   display: flex;
   justify-content: center;
@@ -289,7 +270,6 @@ header {
   height: 90px;
   top: 86px;
   left: 64px;
-  right: 64px;
   bottom: 40px;
   font-size: 20px;
   font-weight: 500;
@@ -332,7 +312,13 @@ header {
   color: #292929;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 14px;
 }
+/* .collections .big-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+} */
 
 .collections .big-card p {
   position: relative;
@@ -386,7 +372,13 @@ header {
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 14px;
 }
+/* .collections .small-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+} */
 .collections .small-card-container .small-card a {
   text-decoration: none;
   color: #ffffff;
@@ -438,7 +430,6 @@ footer {
   height: 205px;
   width: 1200px;
   top: 46px;
-  right: 120px;
   left: 120px;
   bottom: 123px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -461,7 +452,6 @@ footer .footer-container .quick-links {
   height: 165px;
   gap: 10px;
   top: 30px;
-  right: 1241px;
   left: 120px;
   bottom: 123px;
 }
