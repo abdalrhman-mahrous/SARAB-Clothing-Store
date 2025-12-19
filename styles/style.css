@@ -16,8 +16,6 @@ body {
 }
 header {
   min-height: 88px;
-
-  width: 100%;
   background-color: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
@@ -27,7 +25,6 @@ header {
 
 .nav-content {
   width: 100%;
-  min-height: 46px;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
@@ -36,13 +33,11 @@ header {
 
 .user-info img {
   min-height: 46px;
-  width: 46px;
+  max-width: 46px;
   border-radius: 999px;
 }
 
 .user-info {
-  width: 191px;
-  min-height: 46px;
   gap: 8px;
   display: flex;
   align-items: center;
@@ -50,8 +45,6 @@ header {
 
 .user-text {
   min-height: 36px;
-  width: 137px;
-  gap: 9px;
 }
 .user-name {
   color: #ffffff;
@@ -71,9 +64,6 @@ header {
   display: flex;
   list-style: none;
   gap: 40px;
-  max-width: 384px;
-  min-height: 34px;
-  padding: 8px;
 }
 
 .nav-links li a {
@@ -89,21 +79,17 @@ header {
 
 .logo-img img {
   min-height: 44px;
-  width: 135px;
+  max-width: 135px;
 }
 
 .search-bar {
-  margin: 0 auto;
+  margin-inline: auto;
   margin-top: 30px;
-  display: flex;
-  justify-content: center;
   position: relative;
-  width: 100%;
   max-width: 1200px;
 }
 .search-bar input {
   width: 100%;
-  max-width: 1200px;
   min-height: 56px;
   padding: 0 48px 0 16px;
   background-color: #ffffff1f;
@@ -134,18 +120,14 @@ header {
 }
 
 .slider-container {
-  top: 200px;
   margin: 20px auto;
-  bottom: 916px;
-  max-width: 1200px;
-  min-height: 491px;
 }
 
 .slider-wrraper {
   position: relative;
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto;
+  margin-inline: auto;
 }
 
 .slider {
@@ -177,20 +159,18 @@ header {
   line-height: 110%;
 }
 .slider-small-header p {
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 500;
   line-height: 160%;
-  width: 600px;
 }
 .slider-btn {
   display: inline-block;
-  width: 150px;
-  min-height: 50px;
+  max-width: 150px;
+  width: 100%;
   background-color: #151515;
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
-  border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.5s ease;
@@ -230,21 +210,18 @@ header {
 }
 
 .about-us-container {
-  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
-  min-height: 216px;
   margin-top: 40px;
 }
 
 .about-us {
   position: relative;
-  min-height: 216px;
+  min-height: 170px;
   max-width: 1200px;
   width: 100%;
-  display: flex;
-  justify-content: center;
+
   align-items: center;
   border-radius: 16px;
   background-color: #ffffff33;
@@ -254,9 +231,6 @@ header {
   position: absolute;
   top: 35px;
   left: 50%;
-  bottom: 156px;
-  display: flex;
-  justify-content: center;
   font-size: 28px;
   line-height: 20px;
   font-weight: bold;
@@ -264,18 +238,14 @@ header {
   transform: translateX(-50%);
 }
 .about-us .paragraph-about-us {
-  position: absolute;
-  display: flex;
   text-align: center;
-  top: 86px;
-  left: 50%;
+  margin-top: 70px;
   font-size: 20px;
   font-weight: 500;
   line-height: 150%;
   max-width: 1200px;
   width: 100%;
   color: #ffffff;
-  transform: translatex(-50%);
 }
 .our-collections {
   display: flex;
@@ -376,15 +346,12 @@ header {
 }
 
 .collections .small-card p {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #292929;
   font-size: 24px;
   font-weight: bold;
-  top: 60%;
-  left: 25%;
 }
 /* .collections .small-card img {
   min-height: 100%;
@@ -435,7 +402,7 @@ footer {
   background-color: #121212;
 }
 .footer-container {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-content: center;
@@ -443,7 +410,7 @@ footer {
   max-width: 1200px;
   width: 100%;
   top: 46px;
-  left: 120px;
+  margin-inline: auto;
   bottom: 123px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -488,13 +455,13 @@ footer .footer-container .quick-links ul li a:hover {
 }
 
 footer .footer-container .contact-us p {
-  width: 100px;
+  max-width: 100px;
   min-height: 16px;
   font-weight: 700;
   font-size: 16px;
   line-height: 100%;
   color: #ffffff;
-  margin-left: 60px;
+  margin-inline: auto;
 }
 
 footer .footer-container .contact-us .contact-info {
@@ -548,4 +515,14 @@ footer .footer-container .follow-us-icons a {
   min-height: 40px;
   gap: 5px;
   margin-top: 40px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    display: none;
+  }
 }
