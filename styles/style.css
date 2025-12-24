@@ -27,8 +27,26 @@ header {
   width: 100%;
   max-width: 1200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 16px;
+}
+
+/* Make the nav the flexible/centering element so items don't get
+   pushed apart by space-between. Keeps logo and user items fixed. */
+nav {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-img {
+  flex: 0 0 auto;
+}
+
+.user-info,
+.mobile-nav {
+  flex: 0 0 auto;
 }
 
 .user-info img {
@@ -521,8 +539,39 @@ footer .footer-container .follow-us-icons a {
   display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   .nav-links {
     display: none;
+  }
+  header {
+    min-height: 60px;
+  }
+  .logo-img img {
+    min-height: 28px;
+    max-width: 86px;
+    display: block;
+  }
+  .user-text {
+    display: none;
+  }
+  .nav-content {
+    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  }
+
+  .mobile-nav {
+    display: block;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
   }
 }
