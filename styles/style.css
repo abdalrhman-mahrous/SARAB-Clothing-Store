@@ -141,7 +141,7 @@ nav {
   margin: 20px auto;
 }
 
-.slider-wrraper {
+.slider-wrapper {
   position: relative;
   max-width: 1200px;
   width: 100%;
@@ -160,7 +160,7 @@ nav {
 
 .slider-text {
   position: absolute;
-  top: 50%;
+  top: 69%;
   left: 50px;
   transform: translateY(-50%);
   display: flex;
@@ -176,11 +176,11 @@ nav {
   font-weight: 400;
   line-height: 110%;
 }
-.slider-small-header p {
+/* .slider-small-header p {
   font-size: 1em;
   font-weight: 500;
   line-height: 160%;
-}
+} */
 .slider-btn {
   display: inline-block;
   max-width: 150px;
@@ -205,6 +205,7 @@ nav {
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: cover;
+  object-position: center center; /* prefer the center of each image */
 }
 .slider-nav {
   display: flex;
@@ -267,7 +268,7 @@ nav {
 }
 .our-collections {
   display: flex;
-  padding: 75px;
+  padding: 60px;
   justify-content: center;
   min-height: 20px;
   font-size: 32px;
@@ -278,19 +279,15 @@ nav {
 }
 
 .collections-wrapper {
-  position: relative;
-  width: 100%;
   display: flex;
   justify-content: center;
-  min-height: 500px;
-  margin-top: 20px;
+  min-height: 550px;
+  margin-bottom: 60px;
 }
 
 .collections {
-  position: absolute;
   max-width: 1200px;
   width: 100%;
-  min-height: 500px;
   display: flex;
   background-color: #292929;
   gap: 6px;
@@ -298,14 +295,21 @@ nav {
 .collections .big-card {
   position: relative;
   background-color: #898989;
-  min-height: 100%;
   width: 50%;
   font-size: 24px;
   font-weight: bold;
   color: #292929;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* bottom-origin shadow on the card face */
+  box-shadow: 0 14px 26px -6px rgba(0, 0, 0, 0.42),
+    0 2px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1),
+    box-shadow 0.28s ease;
   border-radius: 14px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .collections .big-card p {
@@ -342,7 +346,6 @@ nav {
 }
 
 .collections .small-card-container {
-  min-height: 100%;
   width: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -358,9 +361,17 @@ nav {
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* bottom-origin shadow on the card face (slightly smaller) */
+  box-shadow: 0 14px 26px -6px rgba(0, 0, 0, 0.42),
+    0 2px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1),
+    box-shadow 0.28s ease;
   border-radius: 14px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .collections .small-card p {
@@ -371,11 +382,9 @@ nav {
   font-size: 24px;
   font-weight: bold;
 }
-/* .collections .small-card img {
-  min-height: 100%;
-  width: 100%;
-  object-fit: cover;
-} */
+.collections .small-card img {
+  display: none;
+}
 .collections .small-card-container .small-card a {
   text-decoration: none;
   color: #ffffff;
@@ -401,35 +410,28 @@ nav {
 }
 .collections .big-card:hover {
   cursor: pointer;
-  transform: translateY(-10px); /* Moves the card up by 10px */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhances the shadow on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 28px 60px -12px rgba(0, 0, 0, 0.62),
+    0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .collections .small-card:hover {
   cursor: pointer;
-  transform: translateY(-10px); /* Moves the card up by 10px */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhances the shadow on hover */
+  transform: translateY(-8px);
+  box-shadow: 0 22px 48px -10px rgba(0, 0, 0, 0.56),
+    0 6px 14px rgba(0, 0, 0, 0.1);
 }
 
 footer {
   min-height: 334px;
-  width: 100%;
-  position: relative;
-  top: 100px;
-  bottom: 0;
   background-color: #121212;
 }
 .footer-container {
   position: relative;
   display: flex;
   justify-content: space-around;
-  align-content: center;
   min-height: 205px;
-  max-width: 1200px;
-  width: 100%;
   top: 46px;
-  margin-inline: auto;
-  bottom: 123px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -446,12 +448,8 @@ footer .footer-container .quick-links {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 79px;
-  min-height: 165px;
-  gap: 10px;
-  top: 30px;
-  left: 120px;
-  bottom: 123px;
+  max-width: 79px;
+  gap: 5px;
 }
 footer .footer-container .quick-links ul li {
   list-style: none;
@@ -486,10 +484,8 @@ footer .footer-container .contact-us .contact-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 166px;
-  min-height: 108px;
-  gap: 20px;
-  margin-top: 30px;
+  gap: 30px;
+  margin-top: 26px;
 }
 footer .footer-container .contact-us .contact-info p {
   font-size: 16px;
@@ -500,15 +496,11 @@ footer .footer-container .contact-us .contact-info p {
 footer > p {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 14px;
   color: #ffffff99;
   font-weight: 400;
   font-size: 14px;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  margin-top: 65px;
 }
 
 footer .footer-container .follow-us p {
@@ -573,5 +565,117 @@ footer .footer-container .follow-us-icons a {
     color: #ffffff;
     font-size: 24px;
     cursor: pointer;
+  }
+  /* Make slider taller on small screens so text has room */
+  .slider {
+    aspect-ratio: unset;
+    height: 420px;
+    min-height: 360px;
+  }
+  .slider img {
+    /* make each slide fill the slider and keep the center visible */
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .footer-container {
+    flex-direction: column;
+    position: unset;
+    padding: 20px;
+  }
+  footer .footer-container .quick-links {
+    align-items: flex-start;
+  }
+  footer .footer-container .quick-links p {
+    margin-left: 20px;
+  }
+
+  footer .footer-container .quick-links ul li {
+    list-style: none;
+    margin: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  footer .footer-container .contact-us p {
+    margin-inline: 0;
+    margin-left: 20px;
+  }
+
+  footer .footer-container .contact-us .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 166px;
+    min-height: 108px;
+    gap: 20px;
+    margin: 20px 0px;
+  }
+
+  .follow-us {
+    margin-bottom: 20px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 20px;
+  }
+  footer > p {
+    display: none;
+  }
+  /* Slider text adjustments for small screens: keep visible, smaller font */
+  .slider-text {
+    left: 20px;
+    top: 69%;
+    transform: translateY(-52%);
+    width: clamp(220px, 62%, 520px);
+    padding: 12px;
+  }
+  .slider-main-header p {
+    font-size: 28px;
+    line-height: 105%;
+  }
+  /* .slider-small-header p {
+    font-size: 14px;
+  } */
+  .slider-btn {
+    max-width: 200px;
+    padding: 0 14px;
+    line-height: 42px;
+    font-size: 15px;
+  }
+
+  .about-us .paragraph-about-us {
+    font-size: 17px;
+  }
+  /* Responsive collection layout: big card above 2x2 grid, centered and narrower */
+  .collections-wrapper {
+    padding: 16px;
+  }
+  .collections {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center; /* center the narrower cards */
+    padding: 12px 0;
+  }
+  .collections .big-card {
+    width: 80%;
+    min-height: 260px; /* give more vertical space */
+    border-radius: 12px;
+    order: 0;
+  }
+  .collections .small-card-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 180px; /* taller small cards */
+    gap: 10px;
+    order: 1;
+  }
+  .collections .small-card {
+    min-height: 180px;
+    border-radius: 12px;
   }
 }
